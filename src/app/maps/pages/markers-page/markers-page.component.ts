@@ -62,8 +62,6 @@ export class MarkersPageComponent implements AfterViewInit {
     const lngLat = this.map?.getCenter();
 
     this.addMarker(lngLat, color);
-
-    this.saveToLocalStorage();
   }
 
   addMarker(lngLat: LngLat, color: string) {
@@ -79,6 +77,12 @@ export class MarkersPageComponent implements AfterViewInit {
     this.markers.push({
       color,
       marker,
+    });
+
+    this.saveToLocalStorage();
+
+    marker.on('dragend', () => {
+      this.saveToLocalStorage();
     });
   }
 
