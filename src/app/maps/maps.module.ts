@@ -16,6 +16,7 @@ import { MarkersPageComponent } from './pages/markers-page/markers-page.componen
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
 import { environment } from 'src/environments/environments';
+import { CounterAloneComponent } from '../alone/components/counter-alone/counter-alone.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,6 @@ import { environment } from 'src/environments/environments';
     PropertiesPageComponent,
     ZoomRangePageComponent,
   ],
-  imports: [CommonModule, MapsRoutingModule],
+  imports: [CommonModule, MapsRoutingModule, CounterAloneComponent],
 })
 export class MapsModule {}
